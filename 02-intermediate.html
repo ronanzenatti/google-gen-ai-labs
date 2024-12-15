@@ -415,7 +415,73 @@
         </div>
     </footer>
 
+
+
+    <!-- Floating Button -->
+    <button class="btn btn-danger btn-lg text-light floating-button" data-bs-toggle="modal" data-bs-target="#formModal">
+        <i class="bi bi-person-raised-hand text-warning"></i>
+        SOLICITAR NOVAS TENTATIVAS
+        <i class="bi bi-question-octagon-fill text-warning"></i>
+    </button>
+
+
+    <!-- Form Modal -->
+    <div class="modal fade" id="formModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">SOLICITAÇÃO DE NOVAS TENTATIVAS</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="fw-bold text-primary">Preencha os dados abaixo para gerar o texto que deve ser enviado
+                        ao suporte do Google para solicitar novas tentativas de execução dos laboratórios.</p>
+                    <form id="supportForm">
+                        <div class="mb-3">
+                            <label for="studentName" class="form-label fw-bold">DIGITE SEU NOME COMPLETO:</label>
+                            <input type="text" class="form-control" id="studentName" required
+                                placeholder="NOME COMPLETO">
+                        </div>
+                        <div class="mb-3">
+                            <label for="labName" class="form-label fw-bold">DIGITE O NOME DO LABORATÓRIO:</label>
+                            <input type="text" class="form-control" id="labName" required
+                                placeholder="NOME DO LABORATÓRIO">
+                        </div>
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary">GERAR TEXTO</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Result Modal -->
+    <div class="modal fade" id="resultModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">SOLICITAÇÃO DE NOVAS TENTATIVAS</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="fw-bold text-primary">Envie o texto abaixo para o suporte do Google para solicitar novas
+                        tentativa de execução do laboratório:</p>
+                    <div class="my-3">
+                        <p id="generatedText" class="p-3 bg-light"></p>
+                    </div>
+                    <div class="d-grid">
+                        <button id="copyButton" class="btn btn-primary">
+                            <i class="bi bi-clipboard"></i> COPIAR O TEXTO
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
